@@ -12,16 +12,44 @@ content-type: application/json
     "mobileNumber": "+94718923456"
 }
 
-### Get users
+HTTP/1.1 405  - Method Not Allowed
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 17:16:38 +0530
+content-encoding: gzip
+content-length: 157
+###
 GET http://localhost:9090/social-media/users
 
-### Get a specific user
-GET http://localhost:9090/social-media/users/1
+HTTP/1.1 200  - OK
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 17:16:39 +0530
+content-encoding: gzip
+content-length: 118
+###
+GET http://localhost:9090/social-media/users/2
 
-### Get posts
+HTTP/1.1 404  - Not Found
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 18:34:01 +0530
+content-encoding: gzip
+content-length: 135
+###
 GET http://localhost:9090/social-media/users/3/posts
 
-### Create a post
+HTTP/1.1 404  - Not Found
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 17:16:40 +0530
+content-encoding: gzip
+content-length: 183
+###
 POST http://localhost:9090/social-media/users/3/posts
 content-type: application/json
 
@@ -31,10 +59,24 @@ content-type: application/json
     "category": "education"
 }
 
-### Delete a user
+HTTP/1.1 404  - Not Found
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 17:16:40 +0530
+content-encoding: gzip
+content-length: 186
+###
 DELETE http://localhost:9090/social-media/users/1
 
-### Sentiment Analysis endpoint
+HTTP/1.1 404  - Not Found
+content-type: application/json
+connection: close
+server: ballerina
+date: Sat, 9 Aug 2025 17:16:40 +0530
+content-encoding: gzip
+content-length: 183
+###
 POST http://localhost:9099/text-processing/api/sentiment
 
 {
